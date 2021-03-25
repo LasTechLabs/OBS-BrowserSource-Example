@@ -1,8 +1,7 @@
-//EXAMPLE SCRIPT START
-//create socketio server
+//Require SocketIO
 var socketIO = require('socket.io')
 
-//run socket io on port 3000
+//run socket io on port 3000, allowing all connections
 const io = socketIO(3000, {
 	/*
 	CORS policy stands for Cross-Origin Resource Sharing (policy). 
@@ -17,7 +16,7 @@ const io = socketIO(3000, {
 });
 
 
-// This event will trigger whenever a client connects to the SocketIO server
+//This event will trigger whenever a client connects to the SocketIO server
 io.on('connection', socket=>{
 	console.log(`${socket.id} is connected`)
 	
