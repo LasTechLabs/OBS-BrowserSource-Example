@@ -11,14 +11,14 @@
 
 				<!-- This is the script containing the web-page logic -->
         <script>
-						<!-- create a socketIO instance -->
-						<!-- ATM it connects to your localhost on port 300, as set in app.js -->
-            var socket = io.connect('http://localhost:3000'); 
+						//create a socketIO instance
+						//ATM it connects to your localhost on port 300, as set in app.js
+            let socket = io.connect('http://localhost:3000'); 
 						
-						<!-- This is how you listen for a particular event -->
+						// This is how you listen for a particular event
             socket.on('update', update_data => {
-                <!-- enable this if you want to see the data being received -->
-								<!-- console.log(update_data); -->
+                //enable this if you want to see the data being received 
+								// console.log(update_data); 
 
                 // If you wanted to, you could respond like so
                 //socket.emit('client_message_event', {data: 'foo!', id: data.id});
