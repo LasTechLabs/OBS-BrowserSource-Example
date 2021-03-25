@@ -9,7 +9,7 @@ const io = socketIO(3000, {
     t(-_- t)
     */
     cors: {
-        origin: ["localhost", "127.0.0.1", "null", "http://absolute"],,
+        origin: ["localhost", "127.0.0.1", "null", "http://absolute"],
         methods: ["GET", "POST"],
         allowedHeaders: ["content-type"]
     },
