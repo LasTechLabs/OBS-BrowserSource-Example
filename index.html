@@ -1,36 +1,35 @@
 <!doctype html>
 <html>
 <!-- First and foremost. This shouldn't be used as an example for general html pages. It is missing a lot of shit that is unnecessary for the purposes of a browser source, but IS necessary for regular webpages. -->
-    <head>
-        
-				<!-- This imports the SOCKET IO client from the socketio server -->
-				<script src='http://localhost:3000/socket.io/socket.io.js'></script> 
-				
-				<!-- It can also be imported from a remote CDN -->
-				<!-- <script src="https://cdn.socket.io/4.0.0/socket.io.min.js" integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy" crossorigin="anonymous"></script> -->
 
-				<!-- This is the script containing the web-page logic -->
-        <script>
-						//create a socketIO instance
-						//ATM it connects to your localhost on port 300, as set in app.js
-            let socket = io.connect('http://localhost:3000'); 
-						
-						// This is how you listen for a particular event
-            socket.on('update', update_data => {
-                //enable this if you want to see the data being received 
-								// console.log(update_data); 
+<head>
+	    <!-- This imports the SOCKET IO client from the socketio server -->
+	    <script src='http://localhost:3000/socket.io/socket.io.js'></script>
+	    <!-- It can also be imported from a remote CDN -->
+	    <!-- <script src="https://cdn.socket.io/4.0.0/socket.io.min.js" integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy" crossorigin="anonymous"></script> -->
+	    <!-- This is the script containing the web-page logic -->
+	    <script>
+	    //create a socketIO instance
+	    //ATM it connects to your localhost on port 300, as set in app.js
+	    let socket = io.connect('http://localhost:3000');
 
-                // If you wanted to, you could respond like so
-                //socket.emit('client_message_event', {data: 'foo!', id: data.id});
+	    // This is how you listen for a particular event
+	    socket.on('update', update_data => {
+	        //uncomment this if you want to see the data being received 
+	        // console.log(update_data); 
 
-								//set the gif source to whatever was sent in the update event
-								document.getElementById('gif_placeholder').src = `${update_data.NewGif}.gif`
-            });
-						
-        </script>
-    </head>
-    <body>
-				<!-- This is an image element. It will be where you gif is displayed -->
-        <img id='gif_placeholder' src='./loading.gif'/>
-    </body>
+	        // If you wanted to, you could respond like so
+	        //socket.emit('client_message_event', {data: 'foo!', id: data.id});
+
+	        //set the gif source to whatever was sent in the update event
+	        document.getElementById('gif_placeholder').src = `${update_data.NewGif}.gif`
+	    });
+    </script>
+</head>
+
+<body>
+    <!-- This is an image element. It will be where you gif is displayed -->
+    <img id='gif_placeholder' src='./loading.gif' />
+</body>
+
 </html>
