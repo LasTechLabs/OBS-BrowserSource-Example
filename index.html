@@ -5,10 +5,13 @@
 <head>
 	    <!-- This imports the SOCKET IO client from the socketio server -->
 	    <script src='http://localhost:3000/socket.io/socket.io.js'></script>
+	
 	    <!-- It can also be imported from a remote CDN -->
 	    <!-- <script src="https://cdn.socket.io/4.0.0/socket.io.min.js" integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy" crossorigin="anonymous"></script> -->
+	    
 	    <!-- This is the script containing the web-page logic -->
 	    <script>
+		    
 	    //create a socketIO instance
 	    //ATM it connects to your localhost on port 300, as set in app.js
 	    let socket = io.connect('http://localhost:3000');
