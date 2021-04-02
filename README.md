@@ -1,6 +1,10 @@
 # OBS-BrowserSource-Example
 
-## Running the example: 
+## Jump to:
+1. [Running the example](#Running-the-example)
+2. [Demo](#Demo)
+
+## Running the example:<a name="Running-the-example"></a>
 
 1) Download/clone this git repository; open powershell and run:
 
@@ -18,7 +22,6 @@
 
     - When you're adding it to OBS make sure you have the "Local File" option checked. As long as the back-end is running the gifs will cycle between True and False.
 
-
-## Demo (bottom right corner)
+## Demo (bottom right corner)<a name="Demo"></a>
 
 ![](https://i.imgur.com/rLUc4KJ.gif)
