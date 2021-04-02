@@ -17,3 +17,8 @@
 4) You can either open index.html in a regular web-browser or add it as a BrowserSource in OBS. 
 
     - When you're adding it to OBS make sure you have the "Local File" option checked. As long as the back-end is running the gifs will cycle between True and False.
+
+
+## Demo (bottom right corner)
+
+![](https://i.imgur.com/rLUc4KJ.gif)
